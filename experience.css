@@ -8,7 +8,7 @@
 }
 
 /* ========================
-   Base & Body
+   Base & Body
 ======================== */
 * {
   font-family: "Poppins", sans-serif;
@@ -48,7 +48,7 @@ body::before {
 }
 
 /* ========================
-     Header & Navigation (Copied from Home.css)
+     Header & Navigation (Copied from Home.css)
 ======================== */
 header {
   background-color: #ffffff;
@@ -127,15 +127,19 @@ nav {
 /* Responsive Navbar */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .nav-links {
     display: none;
+    position: absolute;
+    top: 60px;
+    right: 0; /* Align to the right */
+    max-width: 250px; /* Set a smaller max-width for the dropdown */
+    background-color: #ffffff;
     flex-direction: column;
-    width: 100%;
-    background: #ffffff;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -157,7 +161,7 @@ nav {
 }
 
 /* ========================
-     Sections
+     Sections
 ======================== */
 .section {
   padding: 3rem 0;
@@ -184,7 +188,7 @@ nav {
 }
 
 /* ========================
-     Experience List
+     Experience List
 ======================== */
 .experience-list {
   display: flex;
@@ -224,7 +228,7 @@ nav {
 }
 
 /* ========================
-     Certifications
+     Certifications
 ======================== */
 .certification-list {
   display: grid;

@@ -130,6 +130,15 @@
       hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("active");
       });
+
+      document.addEventListener("click", (e) => {
+        // Close the menu if the user clicks outside of it
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        }
+      });
     </script>
   </body>
 </html>
