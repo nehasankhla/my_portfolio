@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utkarsh Kaushal</title>
+    <link rel="stylesheet" href="Home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="light-mode">
+    <header>
+      <nav class="container">
+        <a href="home.html" class="logo">MY PORTFOLIO</a>
+        <button class="hamburger-menu">☰</button>
+        <div class="nav-links">
+          <button class="nav-button" id="experience-btn">EXPERIENCE</button>
+          <button class="nav-button" id="qualification-btn">
+            QUALIFICATION
+          </button>
+          <button class="nav-button" id="pro&cer-btn">
+            PROJECT & CERTIFICATION
+          </button>
+          <button class="nav-button" id="contact-btn">CONTACT</button>
+          <button class="nav-button" id="home-btn">
+            <img src="home-logo-images-black-5.png" alt="" />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="container">
+        <div class="hero-content">
+          <h1>Hi, I'm <span class="highlight">Utkarsh Kaushal</span></h1>
+          <h2>Software Developer</h2>
+        </div>
+        <div class="hero-image">
+          <img src="Utkarsh.jpg" alt="Utkarsh Kaushal" />
+        </div>
+      </section>
+
+      <section id="about" class="container">
+        <div class="about-content">
+          <h2>About Me</h2>
+          <p style="text-align: center">
+            I am a software developer with expertise in Node.js, Express, Web
+            Socket, PostgreSQL, MongoDB, API development, and Azure DevOps
+            Services. With 3 years of experience in the tech industry, I have
+            honed my skills to become a reliable and efficient developer. My
+            expertise lies in creating scalable and efficient applications using
+            Node.js.
+          </p>
+
+          <p style="text-align: center">
+            I have also worked extensively on API development/maintenance,
+            ensuring seamless communication for the clients. I am proficient in
+            using Azure DevOps Services to streamline the development process
+            and deliver high-quality products. Apart from my technical skills, I
+            am a team player and enjoy collaborating with others to achieve a
+            common goal. I am a great communicator and always strive to maintain
+            open and transparent communication within my team.
+          </p>
+
+          <p style="text-align: center">
+            I believe that a positive and supportive work environment is crucial
+            for success. In my free time, you can find me doing sketching and
+            nature photography, as well as creating tech related videos/shorts
+            for my YouTube and Instagram pages.
+          </p>
+          <br />
+          <br />
+
+          <div class="skills">
+            <div class="skill-group">
+              <h4 style="text-align: center">Technical Skills</h4>
+              <ul style="text-align: center">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Websockets</li>
+                <li>MongoDB/PostgreSQL</li>
+                <li>Microservices</li>
+                <li>Docker</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4 style="text-align: center">Soft Skills</h4>
+              <ul style="text-align: center">
+                <li>Leadership</li>
+                <li>Teamwork</li>
+                <li>Presentation</li>
+                <li>Communication</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4 style="text-align: center">Hobbies</h4>
+              <ul style="text-align: center">
+                <li>Cricket</li>
+                <li>Sketching</li>
+                <li>Nature photography</li>
+              </ul>
+            </div>
+          </div>
+          <div class="objectives">
+            <p>
+              <b>Career Objective:</b> To use my skills in the best possible way
+              for achieving the company's goals.
+            </p>
+            <a href="Utkarsh_Resume.pdf" class="resume-link" download
+              >Download My Resume</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Utkarsh Kaushal. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("experience-btn")
+        .addEventListener("click", () => {
+          window.location.href = "experience.html";
+        });
+      document
+        .getElementById("qualification-btn")
+        .addEventListener("click", () => {
+          window.location.href = "Qualification.html";
+        });
+      document.getElementById("pro&cer-btn").addEventListener("click", () => {
+        window.location.href = "pro&cer.html";
+      });
+      document.getElementById("contact-btn").addEventListener("click", () => {
+        window.location.href = "contact.html";
+      });
+      document.getElementById("home-btn").addEventListener("click", () => {
+        window.location.href = "home.html";
+      });
+
+      const hamburger = document.querySelector(".hamburger-menu");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
