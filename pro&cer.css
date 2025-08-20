@@ -65,6 +65,7 @@ nav {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0.5rem 0; /* Ensures consistent vertical padding */
 }
 
 .logo {
@@ -290,19 +291,31 @@ nav {
    Responsive Navbar
 ======================== */
 @media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .hamburger-menu {
     display: block;
   }
   .nav-links {
     display: none;
+    position: absolute;
+    top: 60px;
+    right: 0; /* Changed from left: 0; to right: 0; to align to the right */
+    width: 250px; /* Made the width smaller */
+    background-color: #ffffff;
     flex-direction: column;
-    width: 100%;
-    background: #fff;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   .nav-links.active {
     display: flex;
   }
   .nav-button {
+    padding: 1rem;
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #eee;

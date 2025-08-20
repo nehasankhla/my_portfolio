@@ -128,8 +128,8 @@ nav {
     display: none;
     position: absolute;
     top: 60px;
-    left: 0;
-    width: 100%;
+    right: 0; /* Changed from left: 0; to right: 0; to align to the right */
+    width: 250px; /* Made the width smaller */
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
@@ -201,25 +201,38 @@ nav {
   transition: box-shadow 0.3s;
 }
 
-/* Mobile Hero */
 @media (max-width: 768px) {
+  body.light-mode {
+    padding-top: 110px; /* smaller space under navbar */
+  }
+
   #hero {
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
+    gap: 0; /* Changed from 0.5rem to 0 to remove all gap. */
+    padding: 0.5rem; /* reduce padding */
   }
+
   .hero-content {
     text-align: center;
+    margin-bottom: -160px; /* Changed from 0.5rem to 0 to remove the gap. */
   }
+
   .hero-image {
     text-align: center;
+    margin: 0;
   }
+
   .hero-image img {
     max-width: 180px;
+    margin: 0;
+    display: block;
   }
+
   .hero-content h1 {
     font-size: 2rem;
   }
+
   .hero-content h2 {
     font-size: 1.2rem;
   }
@@ -330,9 +343,11 @@ footer {
   .hero-content h1 {
     font-size: 1.6rem;
   }
+
   .hero-content h2 {
     font-size: 1rem;
   }
+
   .skill-group {
     min-width: 100%;
   }
