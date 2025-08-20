@@ -48,7 +48,9 @@
         </div>
         <div class="contact-item">
           <img class="contact-icon" src="git.png" alt="GitHub Icon" />
-          <a href="NA" target="_blank"><span>NA</span></a>
+          <a href="https://github.com/Kaushal-utkarsh19" target="_blank"
+            ><span>https://github.com/Kaushal-utkarsh19</span></a
+          >
         </div>
         <div class="contact-item">
           <img class="contact-icon" src="linkedin.png" alt="LinkedIn Icon" />
@@ -91,6 +93,15 @@
       const navLinks = document.querySelector(".nav-links");
       hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        // Close the menu if the user clicks outside of it
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        }
       });
     </script>
   </body>

@@ -34,9 +34,6 @@
     </header>
 
     <main class="container">
-      <!-- =======================
-           PROJECTS (Carousel)
-      ======================== -->
       <section id="internships" class="section">
         <h1 class="section-heading">PROJECTS</h1>
 
@@ -121,9 +118,6 @@
         </div>
       </section>
 
-      <!-- =======================
-           CERTIFICATIONS (Carousel)
-      ======================== -->
       <section id="certifications" class="section">
         <h1 class="section-heading">CERTIFICATIONS</h1>
 
@@ -243,6 +237,15 @@
       const navLinks = document.querySelector(".nav-links");
       hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        // Close the menu if the user clicks outside of it
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        }
       });
 
       // ===== Generic Carousel Logic (rotational) =====

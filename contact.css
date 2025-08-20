@@ -58,6 +58,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem 0; /* Ensures consistent vertical size */
 }
 
 .logo {
@@ -114,15 +115,17 @@ nav {
 
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row; /* Change to row to keep logo and hamburger on the same line */
+    justify-content: space-between;
+    align-items: center;
+    gap: 0; /* Remove gap for cleaner layout */
   }
   .nav-links {
     display: none;
     position: absolute;
     top: 60px;
-    left: 0;
-    width: 100%;
+    right: 0;
+    max-width: 250px;
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
@@ -164,11 +167,19 @@ nav {
   grid-template-columns: 1fr;
   gap: 1.5rem;
   width: 100%;
+  max-width: 900px; /* Limits the max width of the grid */
 }
 
 @media (min-width: 600px) {
   .contact-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Add horizontal padding on smaller screens */
+@media (max-width: 768px) {
+  .contact-grid {
+    padding: 0 1rem;
   }
 }
 
