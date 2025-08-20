@@ -64,6 +64,7 @@ nav {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0.5rem 0;
 }
 
 .logo {
@@ -125,6 +126,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0.5rem 2rem; /* Add padding for a better mobile layout */
   }
 
   .nav-links {
@@ -157,13 +159,17 @@ nav {
 
 /* ===== QUALIFICATION SECTION ===== */
 .qualification-section {
+  /* This container acts as the main content area for spacing */
   max-width: 900px;
-  margin: 8rem auto 4rem;
-  padding: 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  margin: 8rem auto 4rem; /* Centering the main section */
+  padding: 0 2rem; /* Add horizontal padding for a gap on the sides */
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .qualification-section {
+    padding: 0 1rem; /* Adjust padding on smaller screens */
+  }
 }
 
 .section-title {
@@ -180,7 +186,10 @@ nav {
 
 .qualification-list {
   list-style: none;
-  padding: 0;
+  padding: 2rem; /* This padding provides space inside the white card */
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 2rem;

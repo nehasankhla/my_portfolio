@@ -167,11 +167,19 @@ nav {
   grid-template-columns: 1fr;
   gap: 1.5rem;
   width: 100%;
+  max-width: 900px; /* Limits the max width of the grid */
 }
 
 @media (min-width: 600px) {
   .contact-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Add horizontal padding on smaller screens */
+@media (max-width: 768px) {
+  .contact-grid {
+    padding: 0 1rem;
   }
 }
 
