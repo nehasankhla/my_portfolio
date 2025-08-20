@@ -15,7 +15,7 @@
   <body class="light-mode">
     <header>
       <nav class="container">
-        <a href="home.html" class="logo">MY PORTFOLIO</a>
+        <a href="index.html" class="logo">MY PORTFOLIO</a>
         <button class="hamburger-menu">☰</button>
         <div class="nav-links">
           <button class="nav-button" id="experience-btn">EXPERIENCE</button>
@@ -26,8 +26,8 @@
             PROJECT & CERTIFICATION
           </button>
           <button class="nav-button" id="contact-btn">CONTACT</button>
-          <button class="nav-button" id="home-btn">
-            <img src="home-logo-images-black-5.png" alt="Home" />
+          <button class="nav-button" id="index-btn">
+            <img src="images/home-logo-images-black-5.png" alt="Home" />
           </button>
         </div>
       </nav>
@@ -37,23 +37,27 @@
       <h1 class="section-heading">CONTACT ME</h1>
       <section class="contact-grid">
         <div class="contact-item">
-          <img class="contact-icon" src="phone.png" alt="Phone Icon" />
+          <img class="contact-icon" src="images/phone.png" alt="Phone Icon" />
           <a href="tel:8890347664"><span>+91 8890347664</span></a>
         </div>
         <div class="contact-item">
-          <img class="contact-icon" src="email.png" alt="Email Icon" />
+          <img class="contact-icon" src="images/email.png" alt="Email Icon" />
           <a href="mailto:iamutkarshkaushal@gmail.com"
             ><span>iamutkarshkaushal@gmail.com</span></a
           >
         </div>
         <div class="contact-item">
-          <img class="contact-icon" src="git.png" alt="GitHub Icon" />
+          <img class="contact-icon" src="images/git.png" alt="GitHub Icon" />
           <a href="https://github.com/Kaushal-utkarsh19" target="_blank"
             ><span>https://github.com/Kaushal-utkarsh19</span></a
           >
         </div>
         <div class="contact-item">
-          <img class="contact-icon" src="linkedin.png" alt="LinkedIn Icon" />
+          <img
+            class="contact-icon"
+            src="images/linkedin.png"
+            alt="LinkedIn Icon"
+          />
           <a
             href="https://www.linkedin.com/in/utkarsh-kaushal-0b55521b6/"
             target="_blank"
@@ -85,8 +89,8 @@
       document.getElementById("contact-btn").addEventListener("click", () => {
         window.location.href = "contact.html";
       });
-      document.getElementById("home-btn").addEventListener("click", () => {
-        window.location.href = "home.html";
+      document.getElementById("index-btn").addEventListener("click", () => {
+        window.location.href = "index.html";
       });
 
       const hamburger = document.querySelector(".hamburger-menu");
