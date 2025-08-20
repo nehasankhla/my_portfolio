@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience</title>
+    <link rel="stylesheet" href="experience.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="home.html" class="logo">MY PORTFOLIO</a>
+        <button class="hamburger-menu">☰</button>
+        <div class="nav-links">
+          <button class="nav-button" id="experience-btn">EXPERIENCE</button>
+          <button class="nav-button" id="qualification-btn">
+            QUALIFICATION
+          </button>
+          <button class="nav-button" id="pro&cer-btn">
+            PROJECT & CERTIFICATION
+          </button>
+          <button class="nav-button" id="contact-btn">CONTACT</button>
+          <button class="nav-button" id="home-btn">
+            <img src="home-logo-images-black-5.png" alt="" />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="internships" class="section">
+        <h1 class="section-heading">EXPERIENCE</h1>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <div class="job-header">
+              <h2 class="job-title">Microbeans Technology Pvt. Ltd., Jaipur</h2>
+              <span class="job-type">Oct 2024 - July 2025</span>
+            </div>
+            <p class="job-description">
+              <br />
+              1. Leading the backend development of a customer support app aimed
+              at elevating userengagement and service efficiency. <br /><br />
+              2. Engineered real-time chat, integrated audio/videocalling, and
+              implemented intelligent WebSocket-based event handling for
+              seamless,instant customer communication and AI-assisted issue
+              resolution.Boosted backend performance, reliability, and
+              scalability by introducing microservices-based solutions.<br /><br />
+              3. Contributed to the development of a payment gateway
+              application, driving APIdevelopment, backend integrations, and
+              supporting the design of scalable, AI-readymodules.
+            </p>
+          </li>
+
+          <li class="experience-item">
+            <div class="job-header">
+              <h2 class="job-title">
+                Cognizant Technology Solution Pvt. Ltd., Noida
+              </h2>
+              <span class="job-type">Aug 2022 - Oct 2024</span>
+            </div>
+            <p class="job-description">
+              <br />
+              1. Worked on a US-based client project, Humana, where I developed
+              and maintainedsecure, scalable backend applications using Node.js,
+              with hands-on experience in theExpress.js framework and basic.
+              <br /><br />
+              2. AI-powered modules for smart data handling.Actively contributed
+              in an Agile environment, participating in daily stand-ups,
+              sprintplanning, and regular code reviews to ensure timely and
+              quality deliveries. <br /><br />
+              3. Independently handled production issues, ensuring quick
+              resolutions and maintainingsystem stability through basic anomaly
+              detection and log analysis.<br /><br />
+              4. Led the migration of API codebase from ES5 to ES6 standards,
+              making the codebasecleaner, faster, and easier to maintain, while
+              keeping it ready for integration with AI-based APIs.<br /><br />
+              5. Worked on backend deployments using Azure DevOps and CI/CD
+              pipelines, includingautomation of certain workflows using
+              AI-assisted scripting.<br /><br />
+              6. Regularly analyzed and optimized backend operations to improve
+              performance,reliability, and system health with occasional use of
+              AI-based monitoring tools.<br /><br />
+              7. Enhanced code quality and security by resolving
+              SonarQube-reported issues, updatingNode.js dependencies, and
+              introducing preliminary LLM-based static code analysis.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Utkarsh Kaushal. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("experience-btn")
+        .addEventListener("click", () => {
+          window.location.href = "experience.html";
+        });
+      document
+        .getElementById("qualification-btn")
+        .addEventListener("click", () => {
+          window.location.href = "Qualification.html";
+        });
+      document.getElementById("pro&cer-btn").addEventListener("click", () => {
+        window.location.href = "pro&cer.html";
+      });
+      document.getElementById("contact-btn").addEventListener("click", () => {
+        window.location.href = "contact.html";
+      });
+      document.getElementById("home-btn").addEventListener("click", () => {
+        window.location.href = "home.html";
+      });
+
+      const hamburger = document.querySelector(".hamburger-menu");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
