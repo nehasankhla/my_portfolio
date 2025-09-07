@@ -1,0 +1,289 @@
+:root {
+  --bg-color-light: #f4f4f9;
+  --text-color-light: #333;
+  --primary-color-light: #007bff;
+  --secondary-color-light: #e0e0e0;
+  --border-color-light: #ccc;
+  --card-bg-light: #fff;
+}
+
+/* ========================
+   Base & Body
+======================== */
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+  line-height: 1.6;
+  color: #333;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Blurred background (same as Home) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color-light);
+   /* background: url("images/New image.jpg") no-repeat center center fixed; */
+  background-size: cover;
+  filter: blur(18px);
+  z-index: -1; 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ========================
+     Header & Navigation (Copied from Home.css)
+======================== */
+header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: black; /* match home */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #007bff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links button img {
+  width: 2rem;
+  transition: filter 0.3s ease;
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    font-size 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-button:hover {
+  color: #007bff;
+  transform: translateY(-3px);
+}
+
+.nav-button:hover img {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(99%) saturate(3000%)
+    hue-rotate(180deg) brightness(100%) contrast(100%);
+}
+
+.technologies-heading {
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tech-list li {
+    background-color: #e9ecef;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Hamburger */
+.hamburger-menu {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0; /* Align to the right */
+    max-width: 250px; /* Set a smaller max-width for the dropdown */
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-button {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+/* ========================
+     Sections
+======================== */
+.section {
+  padding: 3rem 0;
+}
+
+
+ 
+.section-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #007bff;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #007bff;
+}
+
+/* ========================
+     Experience List
+======================== */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.experience-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px #6fb0f5;
+}
+
+/* 🔹 Job Title Styling */
+.job-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #007bff;
+  margin: 0 0 0.5rem;
+}
+
+/* Job Type */
+.job-type {
+  font-size: 1rem;
+  font-style: italic;
+  color: #777;
+  margin-left: 1rem;
+}
+
+/* ========================
+     Certifications
+======================== */
+.certification-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.certification-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color-light);
+  font-size: 0.9rem;
+  color: white;
+}

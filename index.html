@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neha Sankhla</title>
+    <link rel="stylesheet" href="Home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="light-mode">
+    <header>
+      <nav class="container">
+        <a href="index.html" class="logo">MY PORTFOLIO</a>
+        <button class="hamburger-menu">☰</button>
+        <div class="nav-links">
+          <button class="nav-button" id="experience-btn">EXPERIENCE</button>
+          <button class="nav-button" id="qualification-btn">
+            QUALIFICATION
+          </button>
+          <button class="nav-button" id="pro&cer-btn">
+            PROJECT & CERTIFICATION
+          </button>
+          <button class="nav-button" id="contact-btn">CONTACT</button>
+          <button class="nav-button" id="index-btn">
+            <img src="images/home-logo-images-black-5.png" alt="" />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="container">
+        <div class="hero-content">
+          <h1>Hi, I'm <span class="highlight">Neha Sankhla</span></h1>
+          <h2>Software Developer</h2>
+        </div>
+        <div class="hero-image">
+          <img src="images/copy.png" alt="Utkarsh Kaushal" />
+        </div>
+      </section>
+
+      <section id="about" class="container">
+        <div class="about-content">
+          <h2>About Me</h2>
+          <p style="text-align: center">
+            Motivated MCA student specializing in Cloud Computing, with skills in
+                HTML, CSS, JavaScript, Java, SQL, problem solving and basic knowledge of
+                Microsoft Azure and AWS. Seeking opportunities to apply technical
+                knowledge to real-world projects and grow in a collaborative, innovative
+                tech environment.
+          </p>
+          <br />
+          <br />
+
+          <div class="skills">
+            <div class="skill-group">
+              <h4 style="text-align: center">Technical Skills</h4>
+              <ul style="text-align: center">
+                <li>JAVA</li>
+                        <li>SQL</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4 style="text-align: center">Soft Skills</h4>
+              <ul style="text-align: center">
+                <li>Leadership</li>
+                <li>Teamwork</li>
+                <li>Presentation</li>
+                <li>Communication</li>
+                <li>Active Listening</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4 style="text-align: center">Hobbies</h4>
+              <ul style="text-align: center">
+                <li>Skating</li>
+                        <li>Dancing</li>
+                        <li>Sketching</li>
+              </ul>
+            </div>
+          </div>
+          <div class="objectives">
+            <p>
+              <b>Career Objective:</b> To use my skills in the best possible way
+              for achieving the company's goals.
+            </p>
+            <a href="Neha_Sankhla_cv_5266.pdf" class="resume-link" download
+              >Download My Resume</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Neha Sankhla. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("experience-btn")
+        .addEventListener("click", () => {
+          window.location.href = "experience.html";
+        });
+      document
+        .getElementById("qualification-btn")
+        .addEventListener("click", () => {
+          window.location.href = "Qualification.html";
+        });
+      document.getElementById("pro&cer-btn").addEventListener("click", () => {
+        window.location.href = "pro&cer.html";
+      });
+      document.getElementById("contact-btn").addEventListener("click", () => {
+        window.location.href = "contact.html";
+      });
+      document.getElementById("index-btn").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+
+      const hamburger = document.querySelector(".hamburger-menu");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        // Close the menu if the user clicks outside of it
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience</title>
+    <link rel="stylesheet" href="experience.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="index.html" class="logo">MY PORTFOLIO</a>
+        <button class="hamburger-menu">☰</button>
+        <div class="nav-links">
+          <button class="nav-button" id="experience-btn">EXPERIENCE</button>
+          <button class="nav-button" id="qualification-btn">
+            QUALIFICATION
+          </button>
+          <button class="nav-button" id="pro&cer-btn">
+            PROJECT & CERTIFICATION
+          </button>
+          <button class="nav-button" id="contact-btn">CONTACT</button>
+          <button class="nav-button" id="index-btn">
+            <img src="images/home-logo-images-black-5.png" alt="" />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="internships" class="section">
+        <h1 class="section-heading">INTERNSHIP</h1>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <div class="job-header">
+              <h2 class="job-title">Collabera Digital, Vadodara</h2>
+              <span class="job-type">Jan 2024 - Apr 2024</span>
+            </div>
+            <p class="job-description">
+              <br />
+             Completed a 3-month internship in Web Development, with a primary
+             emphasis on Database Management. Gained hands-on experience in
+            designing websites using HTML, CSS and JavaScript. Worked with SQL for
+            efficient data handling. Collaborated on real-time projects within a teambased environment.
+            <p class="technologies-heading">Technologies/Languages worked on:</p>
+                    <ul class="tech-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                    </ul>
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Utkarsh Kaushal. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("experience-btn")
+        .addEventListener("click", () => {
+          window.location.href = "experience.html";
+        });
+      document
+        .getElementById("qualification-btn")
+        .addEventListener("click", () => {
+          window.location.href = "Qualification.html";
+        });
+      document.getElementById("pro&cer-btn").addEventListener("click", () => {
+        window.location.href = "pro&cer.html";
+      });
+      document.getElementById("contact-btn").addEventListener("click", () => {
+        window.location.href = "contact.html";
+      });
+      document.getElementById("index-btn").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+
+      const hamburger = document.querySelector(".hamburger-menu");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        // Close the menu if the user clicks outside of it
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

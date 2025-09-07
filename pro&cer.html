@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project & Certification</title>
+    <link rel="stylesheet" href="pro&cer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="index.html" class="logo">MY PORTFOLIO</a>
+        <button class="hamburger-menu" aria-label="Toggle Menu">☰</button>
+        <div class="nav-links">
+          <button class="nav-button" id="experience-btn">EXPERIENCE</button>
+          <button class="nav-button" id="qualification-btn">
+            QUALIFICATION
+          </button>
+          <button class="nav-button" id="pro&cer-btn">
+            PROJECT & CERTIFICATION
+          </button>
+          <button class="nav-button" id="contact-btn">CONTACT</button>
+          <button class="nav-button" id="index-btn">
+            <img src="images/home-logo-images-black-5.png" alt="Home" />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="internships" class="section">
+        <h1 class="section-heading">PROJECTS</h1>
+
+        <div class="carousel">
+          <button class="carousel-btn prev" aria-label="Previous Project">
+            ❮
+          </button>
+
+          <div class="carousel-viewport" id="projects-viewport">
+            <ul class="carousel-track experience-list" id="projects-track">
+              <li class="experience-item slide">
+                <div class="job-header">
+                  <h2 class="job-title">Netflix Template</h2>
+                </div>
+                <p class="job-description">
+                  <span class="project-image-container">
+                      <img id="netflix" src="project/Netflix.png" alt="Netflix Template logo">
+                  </span>
+                    This is a Netflix template created using HTML and CSS.
+                </p>
+              </li>
+
+              <li class="experience-item slide">
+                <div class="job-header">
+                  <h2 class="job-title">Solar System Model</h2>
+                </div>
+                <p class="job-description">
+                  <span class="project-image-container">
+                        <img id="Solar-System" src="project/planet.png" alt="Solar System Model logo">
+                    </span>
+                    Created an interactive model of the solar system using HTML and CSS animations. Simulated planetary orbits with smooth transitions and responsive design for an engaging user experience.
+                </p>
+              </li>
+
+              <li class="experience-item slide">
+                <div class="job-header">
+                  <h2 class="job-title">Text Analyser</h2>
+                </div>
+                <p class="job-description">
+                  <span class="project-image-container">
+                            <img id="Text-Analyser" src="project/T-Letter.png" alt="Text Analyser logo">
+                        </span>
+                        Developed a Text Analysis Tool using HTML, CSS, and JavaScript that provides real-time statistics including word count, sentence count, and character count for user input.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <button class="carousel-btn next" aria-label="Next Project">❯</button>
+        </div>
+      </section>
+
+      <section id="certifications" class="section">
+        <h1 class="section-heading">CERTIFICATIONS</h1>
+
+        <div class="carousel">
+          <button class="carousel-btn prev" aria-label="Previous Certification">
+            ❮
+          </button>
+
+          <div class="carousel-viewport" id="certs-viewport">
+            <ul class="carousel-track certification-list" id="certs-track">
+
+              <li class="certification-item slide">
+                <div class="cert-header">
+                  <h2 class="cert-title">
+                    Solutions	Architecture	Job	Simulation
+                  </h2>
+                  <span class="cert-provider">Forage (AWS)</span><br /><br />
+                </div>
+              </li>
+
+              <li class="certification-item slide">
+                <div class="cert-header">
+                  <h2 class="cert-title">
+                    INTERNSHIP COMPLETION CERTIFICATE
+                  </h2>
+                  <span class="cert-provider">Collabara Digital</span><br /><br />
+                  
+                </div>
+              </li>
+
+              <li class="certification-item slide">
+                <div class="cert-header">
+                  <h2 class="cert-title">
+                    JECRC HackQuest 7
+                  </h2>
+                  <span class="cert-provider">Smart India Hackathon 24</span><br /><br />
+                </div>
+              </li>
+
+              <li class="certification-item slide">
+                <div class="cert-header">
+                  <h2 class="cert-title">
+                    HTML Workshop
+                  </h2>
+                  <span class="cert-provider"
+                    >GeeksforGeeks</span
+                  ><br /><br />
+                </div>
+              </li>
+
+              <li class="certification-item slide">
+                <div class="cert-header">
+                  <h2 class="cert-title">
+                    Cloud Master Class - Discovery Day
+                  </h2>
+                  <span class="cert-provider"
+                    >ETHNUS</span
+                  ><br /><br />
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <button class="carousel-btn next" aria-label="Next Certification">
+            ❯
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Neha Sankhla. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      // ===== Page Navigation =====
+      document
+        .getElementById("experience-btn")
+        .addEventListener("click", () => {
+          window.location.href = "experience.html";
+        });
+      document
+        .getElementById("qualification-btn")
+        .addEventListener("click", () => {
+          window.location.href = "Qualification.html";
+        });
+      document.getElementById("pro&cer-btn").addEventListener("click", () => {
+        window.location.href = "pro&cer.html";
+      });
+      document.getElementById("contact-btn").addEventListener("click", () => {
+        window.location.href = "contact.html";
+      });
+      document.getElementById("index-btn").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+
+      const hamburger = document.querySelector(".hamburger-menu");
+      const navLinks = document.querySelector(".nav-links");
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+
+      document.addEventListener("click", (e) => {
+        // Close the menu if the user clicks outside of it
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        }
+      });
+
+      // ===== Generic Carousel Logic (rotational) =====
+      function initCarousel(root) {
+        const viewport = root.querySelector(".carousel-viewport");
+        const track = root.querySelector(".carousel-track");
+        const slides = Array.from(track.children);
+        const prevBtn = root.querySelector(".carousel-btn.prev");
+        const nextBtn = root.querySelector(".carousel-btn.next");
+
+        let index = 0;
+
+        // Ensure each slide takes full viewport width
+        function sizeSlides() {
+          const width = viewport.clientWidth;
+          slides.forEach((slide) => {
+            slide.style.minWidth = width + "px";
+            slide.style.maxWidth = width + "px";
+          });
+          moveTo(index);
+        }
+
+        function moveTo(i) {
+          // wrap around (rotational)
+          index = (i + slides.length) % slides.length;
+          const offset = -index * viewport.clientWidth;
+          track.style.transform = `translateX(${offset}px)`;
+        }
+
+        prevBtn.addEventListener("click", () => moveTo(index - 1));
+        nextBtn.addEventListener("click", () => moveTo(index + 1));
+        window.addEventListener("resize", sizeSlides);
+
+        // Initialize
+        sizeSlides();
+      }
+
+      // Init both carousels
+      document.querySelectorAll(".carousel").forEach(initCarousel);
+
+      
+        let netflixButton = document.getElementById('netflix');
+        netflixButton.addEventListener('click', () => {
+            window.open('project/netflix/index.html', '_blank');
+        });
+
+        let solarSystemButton = document.getElementById('Solar-System');
+        solarSystemButton.addEventListener('click', () => {
+            window.open('project/Solar/index.html', '_blank');
+        });
+
+        let textAnalyserButton = document.getElementById('Text-Analyser');
+        textAnalyserButton.addEventListener('click', () => {
+            window.open('project/text/index.html', '_blank');
+        });
+
+    </script>
+  </body>
+</html>

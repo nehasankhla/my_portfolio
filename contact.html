@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="light-mode">
+    <header>
+      <nav class="container">
+        <a href="index.html" class="logo">MY PORTFOLIO</a>
+        <button class="hamburger-menu">☰</button>
+        <div class="nav-links">
+          <button class="nav-button" id="experience-btn">EXPERIENCE</button>
+          <button class="nav-button" id="qualification-btn">
+            QUALIFICATION
+          </button>
+          <button class="nav-button" id="pro&cer-btn">
+            PROJECT & CERTIFICATION
+          </button>
+          <button class="nav-button" id="contact-btn">CONTACT</button>
+          <button class="nav-button" id="index-btn">
+            <img src="images/home-logo-images-black-5.png" alt="Home" />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container contact-section">
+      <h1 class="section-heading">CONTACT ME</h1>
+      <section class="contact-grid">
+        <div class="contact-item">
+          <img class="contact-icon" src="images/phone.png" alt="Phone Icon" />
+          <a href="tel:8890347664"><span>+91 8742016840</span></a>
+        </div>
+        <div class="contact-item">
+          <img class="contact-icon" src="images/email.png" alt="Email Icon" />
+          <a href="mailto:iamutkarshkaushal@gmail.com"
+            ><span>nehasankhla1803@gmail.com</span></a
+          >
+        </div>
+        <div class="contact-item">
+          <img class="contact-icon" src="images/git.png" alt="GitHub Icon" />
+          <a href="https://github.com/nehasankhla" target="_blank"
+            ><span>GitHub Profile</span></a
+          >
+        </div>
+        <div class="contact-item">
+          <img
+            class="contact-icon"
+            src="images/linkedin.png"
+            alt="LinkedIn Icon"
+          />
+          <a
+            href="https://www.linkedin.com/in/neha-sankhla-18d03y05m"
+            target="_blank"
+          >
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Neha Sankhla. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("experience-btn")
+        .addEventListener("click", () => {
+          window.location.href = "experience.html";
+        });
+      document
+        .getElementById("qualification-btn")
+        .addEventListener("click", () => {
+          window.location.href = "Qualification.html";
+        });
+      document.getElementById("pro&cer-btn").addEventListener("click", () => {
+        window.location.href = "pro&cer.html";
+      });
+      document.getElementById("contact-btn").addEventListener("click", () => {
+        window.location.href = "contact.html";
+      });
+      document.getElementById("index-btn").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+
+      const hamburger = document.querySelector(".hamburger-menu");
+      const navLinks = document.querySelector(".nav-links");
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        // Close the menu if the user clicks outside of it
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
